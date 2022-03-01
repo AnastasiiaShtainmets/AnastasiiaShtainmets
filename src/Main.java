@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class Main {
 
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Введите символ ");
-            String str = sc.next();
-            char c = str.charAt(0);
-            if (Character.isDigit(c)) System.out.println("это цифра");
-            if (Character.isLetter(c)) System.out.println("это буква");
-            if (".,:;".contains(str)) System.out.println("это пунктуация");
-        }
+    public static void main(String[] args) {
+        System.out.print("Введите количество дней: ");
+        int days=new Scanner(System.in).nextInt();
+
+        convert(days);
 
     }
+    static void convert(int days){
+        if(days<=0) throw new IllegalArgumentException();
+        System.out.println("В "+ days+" днях: "+ days*24 + " часов, "+ days*1440 +" минут, "+ days*86400+" секунд.");
+
+    }
+
+
+}
 
 
