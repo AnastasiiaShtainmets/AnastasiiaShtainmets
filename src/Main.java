@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
-        public static void main(String[] args){
-            System.out.print("Введите число  ");
-            int number=new Scanner(System.in).nextInt();
 
-            multiplicationTable(number);
-
-        }
-        static void multiplicationTable(int number){
-            for (int i = 1; i <=10 ; i++) {
-                System.out.println(number + " * "+ i +" = "+number*i);
-            }
-
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Введите символ ");
+            String str = sc.next();
+            char c = str.charAt(0);
+            if (Character.isDigit(c)) System.out.println("это цифра");
+            if (Character.isLetter(c)) System.out.println("это буква");
+            if (".,:;".contains(str)) System.out.println("это пунктуация");
         }
 
     }
+
+
