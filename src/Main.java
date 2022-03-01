@@ -1,20 +1,18 @@
 import java.util.Scanner;
 
-
-
 public class Main {
-    public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Введите курс рубля ");
-            double rubCourse = scanner.nextDouble();
-            System.out.print("Введите количество рублей: ");
-            double rubCount = scanner.nextDouble();
-            System.out.println("Вы можете купить "+ convert(rubCourse,rubCount)+" евро.");
-        }
+        public static void main(String[] args){
+            System.out.print("Введите число  ");
+            int number=new Scanner(System.in).nextInt();
 
-        static double convert(double rubCourse, double count){
-            return count/rubCourse;
+            multiplicationTable(number);
 
         }
+        static void multiplicationTable(int number){
+            for (int i = 1; i <=10 ; i++) {
+                System.out.println(number + " * "+ i +" = "+number*i);
+            }
 
-}
+        }
+
+    }
